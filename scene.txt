@@ -1,0 +1,88 @@
+Scene 
+{
+  Image.Width = 640;     // taille du viewport
+  Image.Height = 480;   
+  NumberOfMaterials = 3; // nbre de materiel
+  NumberOfSpheres = 3;   // de spheres et de lumieres  
+  NumberOfLights = 2; 
+}
+
+///////////////////////////////////////
+//         List of materials         //
+/////////////////////////////////////// 
+Material0
+{
+  Diffuse.Red = 1.0;    // premier materiel: rouge vert bleu et coef de reflexion 
+  Diffuse.Green = 1.0;
+  Diffuse.Blue = 0.0;
+  Reflection = 0.5; 
+  
+  Specular.Red = 1.0;  
+  Specular.Green = 1.0;
+  Specular.Blue = 1.0;
+  Power = 60;
+}
+Material1
+{
+  Diffuse.Red = 0.0;    // Deuxième materiel
+  Diffuse.Green = 1.0;
+  Diffuse.Blue = 1.0;
+  Reflection = 0.5;  
+  
+  Specular.Red = 1.0;  
+  Specular.Green = 1.0;
+  Specular.Blue = 1.0;
+  Power = 60;
+}
+Material2
+{
+  Diffuse.Red = 1.0;    // Troisième materiel
+  Diffuse.Green = 0.0;
+  Diffuse.Blue = 1.0;
+  Reflection = 0.5;  
+  Specular.Red = 1.0;  
+  Specular.Green = 1.0;
+  Specular.Blue = 1.0;
+  Power = 60; 
+}
+
+///////////////////////////////////////
+//         List of spheres           //
+/////////////////////////////////////// 
+Sphere0
+{
+  Center = 200.0, 0.0, 0.0;// sphere 0: posx, posy, posz, rayon, materiel id  
+  Size = 100.0;
+  Material.Id = 0;
+}
+Sphere1
+{
+  Center = 0.0, 200.0, 0.0;// sphere 1: posx, posy, posz, rayon, materiel id  
+  Size = 100.0;
+  Material.Id = 1;
+}
+Sphere2
+{
+  Center = 0.0, 0.0, 200.0;// sphere 2: posx, posy, posz, rayon, materiel id  
+  Size = 100.0;
+  Material.Id = 2;
+}
+
+///////////////////////////////////////
+//         List of lights            //
+/////////////////////////////////////// 
+Light0
+{
+  Position = 0.0, 240.0, -100.0;// light 0 : posx, posy, posz, intensité rouge, vert et bleu   
+  Intensity.Red = 2.0;
+  Intensity.Green = 2.0;
+  Intensity.Blue = 2.0;
+}
+Light1
+{
+  Position = 640.0, 240.0, -10000.0;// light 1   
+  Intensity.Red = 0.6;
+  Intensity.Green = 0.7;
+  Intensity.Blue = 1.0;
+}
+
